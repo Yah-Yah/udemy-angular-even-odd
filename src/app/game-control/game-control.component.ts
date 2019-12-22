@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GameControlComponent implements OnInit {
   interval;
+  currentNumber = 0;
 
   constructor() { }
 
@@ -15,7 +16,8 @@ export class GameControlComponent implements OnInit {
 
   onStart() {
     this.interval = setInterval(() => {
-      console.log("hi");      
+      this.currentNumber++;
+      console.log(this.currentNumber);
     }, 1000);
         
   }
